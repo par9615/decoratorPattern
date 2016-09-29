@@ -8,6 +8,7 @@ public abstract class Taco {
 
     public int size;
     public String description = "Any Taco";
+    public int size;
     public String getDescription(){
         return description;
     }
