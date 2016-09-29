@@ -11,6 +11,6 @@ public abstract class Taco {
         return description;
     }
     public abstract double cost();
-    public abstract void setStize(int size);
+    public abstract void setSize(int size);
     public abstract int getSize();
 }
