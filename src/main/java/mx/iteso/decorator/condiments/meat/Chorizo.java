@@ -17,7 +17,12 @@ public class Chorizo extends CondimentsDecorator {
 
     @Override
     public double cost() {
-        return 0 + taco.cost();
+        if(getSize() == taco.MINI)
+            return 0.50 + taco.cost();
+        else if(getSize() == taco.REGULAR)
+            return 1.15 + taco.cost();
+        else
+            return 3 + taco.cost();
     }
 
     public void setSize(int size) {
