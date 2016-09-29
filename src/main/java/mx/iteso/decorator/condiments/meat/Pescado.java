@@ -23,7 +23,14 @@ public class Pescado extends Taco{
     }
 
     public void setSize(int size) {
-        taco.size = size;
+        if(size != REGULAR && size != MEGA){
+            throw new IllegalStateException();
+        }
+
+        else{
+            this.size = size;
+        }
+
     }
 
     public int getSize() {
