@@ -8,7 +8,7 @@ public class TacoNormal extends Taco {
     }
 
     public TacoNormal(int size) {
-        super();
+        this();
         setSize(size);
     }
 

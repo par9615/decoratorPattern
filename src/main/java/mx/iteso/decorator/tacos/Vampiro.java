@@ -9,12 +9,12 @@ public class Vampiro extends Taco {
     private Vampiro(){description = "Vampiro";}
 
     public  Vampiro(int size) {
-        super();
+        this();
         setSize(size);
     }
 
     public double cost() {
-        return 10.00;
+        return 12.00;
     }
 
     public void setSize(int size) {

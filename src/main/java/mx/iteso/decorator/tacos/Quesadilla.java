@@ -8,7 +8,7 @@ public class Quesadilla extends Taco {
     }
 
     public Quesadilla(int size) {
-        super();
+        this();
         setSize(size);
     }
 
