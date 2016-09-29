@@ -19,7 +19,7 @@ public class Pescado extends Taco{
 
     @Override
     public double cost() {
-        if(getSize() == taco.MINI)
+        if(getSize() == taco.REGULAR)
             return 0.25 + taco.cost();
         else if(getSize() == taco.MEGA)
             return 1.00 + taco.cost();
