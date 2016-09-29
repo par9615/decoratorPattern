@@ -21,10 +21,8 @@ public class Queso extends CondimentsDecorator {
             return 2.00 + taco.cost();
         else if(getSize() == taco.REGULAR)
             return 3.00 + taco.cost();
-        else if(getSize() == taco.MEGA)
-            return 4.00 + taco.cost();
         else
-            throw new IllegalStateException();
+            return 4.00 + taco.cost();
     }
 
     public void setSize(int size) {
