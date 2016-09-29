@@ -7,6 +7,7 @@ public abstract class Taco {
     public static int MEGA = 2;
 
     public String description = "Any Taco";
+    public int size;
     public String getDescription(){
         return description;
     }
