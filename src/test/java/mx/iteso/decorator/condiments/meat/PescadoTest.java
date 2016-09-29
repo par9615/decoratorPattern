@@ -53,4 +53,9 @@ public class PescadoTest {
         pescado.setSize(Taco.MEGA);
         assertEquals(Taco.MEGA,pescado.getSize());
     }
+
+    @Test (expected = IllegalStateException.class)
+    public void testSettingInvalidSize() {
+        pescado.setSize(Taco.MINI);
+    }
 }

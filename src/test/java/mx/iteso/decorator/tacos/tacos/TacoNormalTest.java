@@ -24,4 +24,9 @@ public class TacoNormalTest {
         tacoNormal.setSize(Taco.MINI);
         assertEquals(Taco.MINI,tacoNormal.getSize());
     }
+
+    @Test (expected = IllegalStateException.class)
+    public void testSettingInvalidSize() {
+        tacoNormal.setSize(4);
+    }
 }
