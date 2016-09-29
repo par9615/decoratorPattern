@@ -44,7 +44,7 @@ public class CamaronTest {
 
         when(taco.getDescription()).thenReturn("Taco Normal");
         String desc = camaron.getDescription();
-        assertEquals("Taco Normal de camarón", desc);
+        assertEquals("Taco Normal de camaron", desc);
     }
 
     @Test

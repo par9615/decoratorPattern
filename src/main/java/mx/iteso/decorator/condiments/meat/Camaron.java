@@ -14,7 +14,7 @@ public class Camaron extends Taco{
 
     @Override
     public String getDescription() {
-        return taco.getDescription() + " de camarón";
+        return taco.getDescription() + " de camaron";
     }
 
     @Override
