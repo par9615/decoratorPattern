@@ -28,4 +28,11 @@ public class CebollaTest {
         String desc = cebolla.getDescription();
         assertEquals("Taco Normal con cebolla", desc);
     }
+
+    @Test
+    public void testSettingSize() {
+        Taco cebolla = new Cebolla(taco);
+        cebolla.setSize(Taco.MEGA);
+        assertEquals(Taco.MEGA,cebolla.getSize());
+    }
 }
