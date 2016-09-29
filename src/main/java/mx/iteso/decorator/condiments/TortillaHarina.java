@@ -19,4 +19,12 @@ public class TortillaHarina extends CondimentsDecorator {
     public double cost() {
         return 4 + taco.cost();
     }
+
+    public void setSize(int size) {
+        taco.size = size;
+    }
+
+    public int getSize() {
+        return taco.getSize();
+    }
 }
