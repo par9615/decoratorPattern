@@ -17,7 +17,12 @@ public class Pastor extends CondimentsDecorator {
 
     @Override
     public double cost() {
-        return 0 + taco.cost();
+        if(getSize() == taco.MINI)
+            return 0.00 + taco.cost();
+        else if(getSize() == taco.REGULAR)
+            return 2.00 + taco.cost();
+        else
+            return 3.50 + taco.cost();
     }
 
     public void setSize(int size) {
@@ -27,4 +32,5 @@ public class Pastor extends CondimentsDecorator {
     public int getSize() {
         return taco.getSize();
     }
+
 }
