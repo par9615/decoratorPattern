@@ -9,21 +9,21 @@ import static org.mockito.Mockito.*;
 
 public class CebollaTest {
     private Taco taco;
+    private Taco cebolla;
     @Before
     public void setUp(){
         taco = mock((Taco.class));
+        when(taco.cost()).thenReturn(8.0);
+        cebolla = new Cebolla(taco);
     }
 
     @Test
     public void testCost(){
-        Taco cebolla = new Cebolla(taco);
-        when(taco.cost()).thenReturn(8.0);
         double cost = cebolla.cost();
         assertEquals(8.0, cost,0);
     }
     @Test
     public void testDescription(){
-        Taco cebolla = new Cebolla(taco);
         when(taco.getDescription()).thenReturn("Taco Normal");
         String desc = cebolla.getDescription();
         assertEquals("Taco Normal con cebolla", desc);
@@ -31,7 +31,7 @@ public class CebollaTest {
 
     @Test
     public void testSettingSize() {
-        Taco cebolla = new Cebolla(taco);
+        when(taco.getSize()).thenReturn(Taco.MEGA);
         cebolla.setSize(Taco.MEGA);
         assertEquals(Taco.MEGA,cebolla.getSize());
     }

@@ -16,7 +16,7 @@ public class Queso extends CondimentsDecorator {
     }
 
     @Override
-    public double cost() {
+    public double cost() throws Exception {
         if(getSize() == taco.MINI)
             return 2.00 + taco.cost();
         else if(getSize() == taco.REGULAR)

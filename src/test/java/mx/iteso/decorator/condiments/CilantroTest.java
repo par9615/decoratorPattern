@@ -13,21 +13,21 @@ import static org.mockito.Mockito.when;
  */
 public class CilantroTest {
     private Taco taco;
+    private Taco cilantro;
     @Before
     public void setUp(){
         taco = mock((Taco.class));
+        when(taco.cost()).thenReturn(8.0);
+        cilantro = new Cilantro(taco);
     }
 
     @Test
     public void testCost(){
-        Taco cilantro = new Cilantro(taco);
-        when(taco.cost()).thenReturn(8.0);
         double cost = cilantro.cost();
         assertEquals(8.0, cost,0);
     }
     @Test
     public void testDescription(){
-        Taco cilantro = new Cilantro(taco);
         when(taco.getDescription()).thenReturn("Taco Normal");
         String desc = cilantro.getDescription();
         assertEquals("Taco Normal con cilantro", desc);
@@ -35,7 +35,7 @@ public class CilantroTest {
 
     @Test
     public void testSettingSize() {
-        Taco cilantro = new Cilantro(taco);
+        when(taco.getSize()).thenReturn(Taco.MEGA);
         cilantro.setSize(Taco.MEGA);
         assertEquals(Taco.MEGA,cilantro.getSize());
     }
