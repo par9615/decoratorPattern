@@ -53,4 +53,9 @@ public class CamaronTest {
         camaron.setSize(Taco.MEGA);
         assertEquals(Taco.MEGA,camaron.getSize());
     }
+
+    @Test (expected = IllegalStateException.class)
+    public void testSettingInvalidSize() {
+        camaron.setSize(Taco.MINI);
+    }
 }

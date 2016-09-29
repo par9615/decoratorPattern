@@ -28,4 +28,9 @@ public class QuesadillaTest {
         quesadilla.setSize(Taco.MINI);
         assertEquals(Taco.MINI, quesadilla.getSize());
     }
+
+    @Test (expected = IllegalStateException.class)
+    public void testSettingInvalidSize() {
+        quesadilla.setSize(4);
+    }
 }

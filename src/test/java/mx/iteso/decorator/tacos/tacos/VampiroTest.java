@@ -1,7 +1,6 @@
 package mx.iteso.decorator.tacos.tacos;
 
 import mx.iteso.decorator.Taco;
-import mx.iteso.decorator.tacos.TacoNormal;
 import mx.iteso.decorator.tacos.Vampiro;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,6 +20,12 @@ public class VampiroTest {
     @Test
     public void testCost() {
         assertEquals(12.0, vampiro.cost(),0);
+    }
+
+    @Test
+    public void testSettingSize() {
+        vampiro.setSize(Taco.REGULAR);
+        assertEquals(Taco.REGULAR,vampiro.getSize());
     }
 
     @Test (expected = IllegalStateException.class)
