@@ -12,7 +12,7 @@ import mx.iteso.decorator.tacos.TacoNormal;
 
 public class TuTaco {
     public static void main(String[] args) {
-        Taco taco = new TacoNormal();
+        Taco taco = new TacoNormal(Taco.REGULAR);
         System.out.println(taco.getDescription());
         System.out.println("$" + taco.cost() + " MXN");
 
@@ -26,7 +26,7 @@ public class TuTaco {
         System.out.println(taco.getDescription());
         System.out.println("$" + taco.cost() + " MXN");
 
-        Taco taco2 = new TacoNormal();
+        Taco taco2 = new TacoNormal(Taco.MEGA);
 
         taco2 = new TortillaHarina(taco2);
         taco2 = new Lengua(taco2);
@@ -37,7 +37,7 @@ public class TuTaco {
         System.out.println(taco2.getDescription());
         System.out.println("$" + taco2.cost() + " MXN");
 
-        Taco taco3 = new Quesadilla();
+        Taco taco3 = new Quesadilla(Taco.MINI);
 
         taco3 = new TortillaHarina(taco3);
         taco3 = new Pastor(taco3);
