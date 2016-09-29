@@ -6,7 +6,12 @@ import mx.iteso.decorator.Taco;
  * Created by simio on 28/09/2016.
  */
 public class Vampiro extends Taco {
-    public Vampiro(){description = "Vampiro";}
+    private Vampiro(){description = "Vampiro";}
+
+    public  Vampiro(int size) {
+        super();
+        setSize(size);
+    }
 
     public double cost() {
         return 10.00;

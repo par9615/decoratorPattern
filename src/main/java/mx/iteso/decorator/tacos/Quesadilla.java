@@ -3,8 +3,13 @@ package mx.iteso.decorator.tacos;
 import mx.iteso.decorator.Taco;
 
 public class Quesadilla extends Taco {
-    public Quesadilla(){
+    private Quesadilla(){
         description = "Quesadilla";
+    }
+
+    public Quesadilla(int size) {
+        super();
+        setSize(size);
     }
 
     @Override
