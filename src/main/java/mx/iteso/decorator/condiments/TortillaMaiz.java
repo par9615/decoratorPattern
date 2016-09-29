@@ -16,7 +16,7 @@ public class TortillaMaiz extends CondimentsDecorator {
     }
 
     @Override
-    public double cost() throws Exception {
+    public double cost() {
         return 0 + taco.cost();
     }
 

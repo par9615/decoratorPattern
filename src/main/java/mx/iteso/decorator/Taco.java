@@ -12,7 +12,7 @@ public abstract class Taco {
     public String getDescription(){
         return description;
     }
-    public abstract double cost() throws Exception;
+    public abstract double cost();
     public abstract void setSize(int size);
     public abstract int getSize();
 
