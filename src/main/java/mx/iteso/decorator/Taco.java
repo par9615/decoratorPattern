@@ -12,7 +12,7 @@ public abstract class Taco {
     public String getDescription(){
         return description;
     }
-    public abstract double cost();
+    public abstract double cost() throws IllegalStateException;
     public abstract void setSize(int size);
     public abstract int getSize();
 
